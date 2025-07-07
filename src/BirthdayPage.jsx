@@ -1,5 +1,36 @@
+"use client";
 import { useState, useEffect } from "react";
 import "./birthdaypage.css";
+import img1 from "../src/images/Screenshot_20250707_165947.jpg";
+import img2 from "../src/images/Screenshot_20250707_170002.jpg";
+import img3 from "./images/Screenshot_20250707_170018.jpg";
+import img4 from "../src/images/Screenshot_20250707_170034.jpg";
+import img5 from "../src/images/Screenshot_20250707_170044.jpg";
+import img6 from "../src/images/Screenshot_20250707_170057.jpg";
+import img7 from "../src/images/Screenshot_20250707_170107.jpg";
+import img8 from "../src/images/Screenshot_20250707_170114.jpg";
+import img9 from "../src/images/Screenshot_20250707_170121.jpg";
+import img10 from "../src/images/Screenshot_20250707_172022.jpg";
+import img11 from "../src/images/Screenshot_20250707_172042.jpg";
+import img12 from "../src/images/Screenshot_20250707_172131.jpg";
+import img13 from "../src/images/Screenshot_20250707_172136.jpg";
+import img14 from "../src/images/Screenshot_20250707_172225.jpg";
+import img15 from "../src/images/Screenshot_20250707_172246.jpg";
+import img16 from "../src/images/Screenshot_20250707_172436.jpg";
+import img17 from "../src/images/Screenshot_20250707_172225.jpg";
+import img18 from "../src/images/Screenshot_20250707_172246.jpg";
+import img19 from "../src/images/Screenshot_20250707_172436.jpg";
+import img20 from "../src/images/Screenshot_20250707_172502.jpg";
+import img21 from "../src/images/Screenshot_20250707_172541.jpg";
+import img22 from "../src/images/Screenshot_20250707_172700.jpg";
+import img23 from "../src/images/Screenshot_20250707_172732.jpg";
+
+import v2 from "../src/Video/_faizan_811-13-02-2023-0017.mp4";
+import v3 from "../src/Video/ishikahukum-19072022-0001.mp4";
+import v4 from "../src/Video/Snapchat-216865904.mp4";
+import v5 from "../src/Video/VID_80470511_102554_778.mp4";
+import v6 from "../src/Video/video_20220901_094530.mp4";
+import v7 from "../src/Video/video_20230227_212837_edit.mp4";
 
 export default function BirthdayPage() {
   const [rangeValue, setRangeValue] = useState(0);
@@ -11,43 +42,46 @@ export default function BirthdayPage() {
   const [showVideoGallery, setShowVideoGallery] = useState(false);
   const [cakeLit, setCakeLit] = useState(true);
   const [confettiActive, setConfettiActive] = useState(false);
+  const [fullScreenImage, setFullScreenImage] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Birthday-themed images
   const birthdayImages = [
-    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&h=400&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=400&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1555507036-ab794f4afe5a?w=400&h=400&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=400&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=400&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1607344645866-009c7d7496df?w=400&h=400&fit=crop&crop=center",
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    img10,
+    img11,
+    img12,
+    img13,
+    img14,
+    img15,
+    img16,
+    img17,
+    img18,
+    img19,
+    img20,
+    img21,
+    img22,
+    img23,
   ];
 
-  const birthdayVideos = [
-    "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-    "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_2mb.mp4",
-    "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4",
-  ];
+  const birthdayVideos = [v2, v3, v4, v5, v6, v7];
 
   const birthdayLetter = `My Dearest Billu,
 
-Today is YOUR special day - the day we celebrate the incredible person you are!
-
-Another year of your amazing journey around the sun, and what a beautiful journey it has been. You light up every room you enter and bring joy to everyone around you.
-
-I'm so grateful to have you in my life. Your laughter is contagious, your kindness is inspiring, and your friendship means the world to me.
-
-On your birthday, I want you to know how truly special you are. You deserve all the happiness, all the love, and all the wonderful surprises that life has to offer.
-
-I hope this birthday is filled with everything that makes you smile - delicious cake, amazing surprises, and moments that become treasured memories.
-
-Here's to celebrating YOU today and always!
-
-Happy Birthday, wonderful Billu! 🎂
-
-With love and endless birthday wishes,
-Your Biggest Fan 💕`;
+Hamesha Jaha bhi Raho khus Rahna Billu , Hamesha Kamiyab Raho meri dua hai tumhe ,tujhe duniya ki saari khushiya mile pagal tu Hamesha khus raho 
+i love you Billy 
+Happy Birthday, beautiful Life Partner! 🌟
+With endless love and warmest wishes,
+Once again happy birthday Billu 
+Forever Love You Pgl Avrt 
+✨`;
 
   useEffect(() => {
     if (rangeValue >= 100) {
@@ -92,134 +126,223 @@ Your Biggest Fan 💕`;
     e.target.style.display = "none";
   };
 
+  const openFullScreenImage = (imageUrl, index) => {
+    setFullScreenImage(imageUrl);
+    setCurrentImageIndex(index);
+  };
+
+  const closeFullScreenImage = () => {
+    setFullScreenImage(null);
+  };
+
+  const navigateImage = (direction) => {
+    const newIndex =
+      direction === "next"
+        ? (currentImageIndex + 1) % birthdayImages.length
+        : (currentImageIndex - 1 + birthdayImages.length) %
+          birthdayImages.length;
+
+    setCurrentImageIndex(newIndex);
+    setFullScreenImage(birthdayImages[newIndex]);
+  };
+
   return (
     <div className="birthday-app">
       {/* Confetti Animation */}
       {confettiActive && (
         <div className="confetti-container">
-          {[...Array(30)].map((_, i) => (
-            <div key={i} className={`confetti confetti-${(i % 6) + 1}`}></div>
+          {[...Array(60)].map((_, i) => (
+            <div key={i} className={`confetti confetti-${(i % 8) + 1}`}></div>
           ))}
         </div>
       )}
 
-      {/* Background Elements */}
-      <div className="bg-elements">
-        <div className="floating-shapes">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className={`shape shape-${(i % 3) + 1}`}></div>
+      {/* Background */}
+      <div className="background">
+        <div className="bg-gradient"></div>
+        <div className="floating-elements">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className={`floating-element element-${i + 1}`}></div>
           ))}
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="main-content">
-        {/* Header */}
-        <header className="header">
-          <div className="birthday-crown">👑</div>
-          <h1 className="main-title">
-            <span className="title-happy">Happy Birthday</span>
-            <span className="title-name">BILLU</span>
-          </h1>
-          <p className="subtitle">🎉 Your special day is here! 🎉</p>
-        </header>
+      {/* Main Container */}
+      <div className="container">
+        {/* Hero Section */}
+        <section className="hero">
+          <div className="hero-content">
+            <div className="crown-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm2.7-2h8.6l.9-5.4-2.1 1.8L12 8l-3.1 2.4-2.1-1.8L7.7 14z" />
+              </svg>
+            </div>
+            <h1 className="hero-title">
+              <span className="title-line-1">Happy Birthday</span>
+              <span className="title-line-2">BILLU</span>
+            </h1>
+            <p className="hero-subtitle">Celebrate Your Day Billu </p>
+            <div className="hero-decoration">
+              <div className="sparkle"></div>
+              <div className="sparkle"></div>
+              <div className="sparkle"></div>
+            </div>
+          </div>
+        </section>
 
-        {/* Birthday Cake Section */}
+        {/* Cake Section */}
         <section className="cake-section">
           <div className="cake-container" onClick={blowCandles}>
-            <div className="simple-cake">
-              <div className="cake-layer cake-bottom"></div>
-              <div className="cake-layer cake-middle"></div>
-              <div className="cake-layer cake-top"></div>
-              <div className="candles">
-                {[...Array(3)].map((_, i) => (
+            <div className="cake">
+              <div className="cake-base">
+                <div className="cake-layer layer-1"></div>
+                <div className="cake-layer layer-2"></div>
+                <div className="cake-layer layer-3"></div>
+              </div>
+              <div className="candles-container">
+                {[...Array(5)].map((_, i) => (
                   <div key={i} className="candle">
-                    <div className="candle-stick"></div>
-                    <div className={`flame ${cakeLit ? "lit" : "out"}`}></div>
+                    <div className="candle-body"></div>
+                    <div
+                      className={`flame ${cakeLit ? "burning" : "out"}`}
+                    ></div>
                   </div>
                 ))}
               </div>
+              <div className="cake-decoration">
+                <div className="cherry"></div>
+              </div>
             </div>
           </div>
-          <p className="cake-text">🕯️ Tap the cake to make a wish!</p>
+          <p className="cake-instruction">Click the cake to make a wish</p>
         </section>
 
-        {/* Action Cards */}
-        <section className="cards-section">
-          <div className="cards-grid">
-            <div
-              className="action-card letter-card"
-              onClick={() => setShowLetter(true)}
-            >
-              <div className="card-icon">💌</div>
-              <h3 className="card-title">Love Letter</h3>
-              <p className="card-desc">Read your special message</p>
+        {/* Features Grid */}
+        <section className="features">
+          <div className="features-grid">
+            <div className="feature-card" onClick={() => setShowLetter(true)}>
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+              </div>
+              <h3 className="feature-title"> Letter</h3>
+              <p className="feature-description">
+                A heartfelt message just for you
+              </p>
+            </div>
+
+            <div className="feature-card" onClick={() => setShowGallery(true)}>
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+                </svg>
+              </div>
+              <h3 className="feature-title">Photo Gallery</h3>
+              <p className="feature-description"> Faiish Beautiful memories </p>
             </div>
 
             <div
-              className="action-card photo-card"
-              onClick={() => setShowGallery(true)}
-            >
-              <div className="card-icon">📸</div>
-              <h3 className="card-title">Photo Gallery</h3>
-              <p className="card-desc">View birthday memories</p>
-            </div>
-
-            <div
-              className="action-card video-card"
+              className="feature-card"
               onClick={() => setShowVideoGallery(true)}
             >
-              <div className="card-icon">🎬</div>
-              <h3 className="card-title">Video Gallery</h3>
-              <p className="card-desc">Watch special moments</p>
+              <div className="feature-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
+                </svg>
+              </div>
+              <h3 className="feature-title">Video Gallery</h3>
+              <p className="feature-description">Special moments in motion</p>
             </div>
           </div>
         </section>
 
-        {/* Slider Section */}
-        <section className="slider-section">
-          <div className="slider-header">
-            <h3>🎁 Unlock Your Surprise</h3>
-            <div className="progress-indicator">{rangeValue}%</div>
-          </div>
-          <div className="slider-wrapper">
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value={rangeValue}
-              onChange={handleRangeChange}
-              className="birthday-slider"
-            />
-            <div className="slider-track">
-              <div
-                className="slider-progress"
-                style={{ width: `${rangeValue}%` }}
-              ></div>
+        {/* Surprise Slider */}
+        <section className="surprise-section">
+          <div className="surprise-card">
+            <div className="surprise-header">
+              <h3 className="surprise-title">Unlock Your Surprise</h3>
+              <div className="progress-circle">
+                <svg className="progress-svg" viewBox="0 0 100 100">
+                  <circle
+                    className="progress-bg"
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    fill="none"
+                    stroke="rgba(255,255,255,0.1)"
+                    strokeWidth="8"
+                  />
+                  <circle
+                    className="progress-bar"
+                    cx="50"
+                    cy="50"
+                    r="45"
+                    fill="none"
+                    stroke="url(#gradient)"
+                    strokeWidth="8"
+                    strokeLinecap="round"
+                    strokeDasharray={`${rangeValue * 2.83} 283`}
+                    transform="rotate(-90 50 50)"
+                  />
+                </svg>
+                <div className="progress-text">{rangeValue}%</div>
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stopColor="#667eea" />
+                    <stop offset="100%" stopColor="#764ba2" />
+                  </linearGradient>
+                </defs>
+              </div>
             </div>
+            <div className="slider-container">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={rangeValue}
+                onChange={handleRangeChange}
+                className="slider"
+              />
+              <div className="slider-track">
+                <div
+                  className="slider-fill"
+                  style={{ width: `${rangeValue}%` }}
+                ></div>
+              </div>
+            </div>
+            {rangeValue < 100 && (
+              <p className="slider-hint">
+                Slide to reveal your magical surprise
+              </p>
+            )}
           </div>
-          {rangeValue < 100 && (
-            <p className="slider-hint">👆 Slide to 100% for a big surprise!</p>
-          )}
         </section>
 
         {/* Gift Box */}
         <section className="gift-section">
           <div className={`gift-box ${isBoxOpen ? "opened" : ""}`}>
-            <div className="box-lid">
-              <div className="lid-decoration">🎀</div>
+            <div className="gift-lid">
+              <div className="ribbon"></div>
             </div>
-            <div className="box-body"></div>
+            <div className="gift-body"></div>
             {isBoxOpen && (
-              <div className="surprise-content">
-                <div className="surprise-text">🎉 SURPRISE! 🎉</div>
-                <div className="mini-gallery">
+              <div className="surprise-reveal">
+                <div className="surprise-title">✨ Surprise! ✨</div>
+                <div className="surprise-gallery">
                   {birthdayImages.slice(0, 4).map((img, index) => (
-                    <div key={index} className="mini-photo">
+                    <div key={index} className="surprise-image">
                       <img
                         src={img || "/placeholder.svg"}
                         alt={`Surprise ${index + 1}`}
                         onError={handleImageError}
+                        onClick={() => openFullScreenImage(img, index)}
                       />
                     </div>
                   ))}
@@ -232,21 +355,23 @@ Your Biggest Fan 💕`;
 
       {/* Letter Modal */}
       {showLetter && (
-        <div className="modal-backdrop" onClick={() => setShowLetter(false)}>
+        <div className="modal-overlay" onClick={() => setShowLetter(false)}>
           <div
             className="modal letter-modal"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="modal-header">
-              <h2>💌 Special Letter</h2>
+              <h2>💌 A Special Letter</h2>
               <button
-                className="close-button"
+                className="modal-close"
                 onClick={() => setShowLetter(false)}
               >
-                ✕
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
               </button>
             </div>
-            <div className="modal-body">
+            <div className="modal-content">
               <div className="letter-content">
                 {birthdayLetter.split("\n").map((line, index) => (
                   <p key={index}>{line}</p>
@@ -259,7 +384,7 @@ Your Biggest Fan 💕`;
 
       {/* Photo Gallery Modal */}
       {showGallery && (
-        <div className="modal-backdrop" onClick={() => setShowGallery(false)}>
+        <div className="modal-overlay" onClick={() => setShowGallery(false)}>
           <div
             className="modal gallery-modal"
             onClick={(e) => e.stopPropagation()}
@@ -267,23 +392,33 @@ Your Biggest Fan 💕`;
             <div className="modal-header">
               <h2>📸 Photo Gallery</h2>
               <button
-                className="close-button"
+                className="modal-close"
                 onClick={() => setShowGallery(false)}
               >
-                ✕
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
               </button>
             </div>
-            <div className="modal-body">
-              <div className="photo-grid">
+            <div className="modal-content">
+              <div className="gallery-grid">
                 {birthdayImages.map((img, index) => (
-                  <div key={index} className="photo-item">
+                  <div
+                    key={index}
+                    className="gallery-item"
+                    onClick={() => openFullScreenImage(img, index)}
+                  >
                     <img
                       src={img || "/placeholder.svg"}
                       alt={`Memory ${index + 1}`}
                       onError={handleImageError}
                     />
-                    <div className="photo-overlay">
-                      <span>Memory {index + 1}</span>
+                    <div className="gallery-overlay">
+                      <div className="gallery-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -296,7 +431,7 @@ Your Biggest Fan 💕`;
       {/* Video Gallery Modal */}
       {showVideoGallery && (
         <div
-          className="modal-backdrop"
+          className="modal-overlay"
           onClick={() => setShowVideoGallery(false)}
         >
           <div
@@ -306,13 +441,15 @@ Your Biggest Fan 💕`;
             <div className="modal-header">
               <h2>🎬 Video Gallery</h2>
               <button
-                className="close-button"
+                className="modal-close"
                 onClick={() => setShowVideoGallery(false)}
               >
-                ✕
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
               </button>
             </div>
-            <div className="modal-body">
+            <div className="modal-content">
               <div className="video-grid">
                 {birthdayVideos.map((video, index) => (
                   <div key={index} className="video-item">
@@ -323,9 +460,6 @@ Your Biggest Fan 💕`;
                       <source src={video} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
-                    <div className="video-info">
-                      <h4>Birthday Video {index + 1}</h4>
-                    </div>
                   </div>
                 ))}
               </div>
@@ -334,36 +468,37 @@ Your Biggest Fan 💕`;
         </div>
       )}
 
-      {/* Celebration Popup */}
+      {/* Celebration Modal */}
       {showPopup && (
-        <div
-          className="modal-backdrop celebration-backdrop"
-          onClick={closePopup}
-        >
+        <div className="modal-overlay celebration-overlay" onClick={closePopup}>
           <div
             className="modal celebration-modal"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="modal-header">
-              <h2>🎉 HAPPY BIRTHDAY! 🎉</h2>
-              <button className="close-button" onClick={closePopup}>
-                ✕
+              <h2>🎉 Happy Birthday! 🎉</h2>
+              <button className="modal-close" onClick={closePopup}>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                </svg>
               </button>
             </div>
-            <div className="modal-body">
+            <div className="modal-content">
               <div className="celebration-content">
                 <h3>🌟 Amazing Billu! 🌟</h3>
                 <p>
-                  Hope your birthday is filled with joy and wonderful surprises!
+                  Wishing you a day filled with happiness and a year filled with
+                  joy!
                 </p>
-                <div className="celebration-gallery">
+                <div className="celebration-grid">
                   {birthdayImages.map((img, index) => (
                     <div
                       key={index}
-                      className={`celebration-photo ${
+                      className={`celebration-item ${
                         animateImages ? "animate" : ""
                       }`}
                       style={{ animationDelay: `${index * 0.1}s` }}
+                      onClick={() => openFullScreenImage(img, index)}
                     >
                       <img
                         src={img || "/placeholder.svg"}
@@ -373,6 +508,46 @@ Your Biggest Fan 💕`;
                     </div>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Full Screen Image Modal */}
+      {fullScreenImage && (
+        <div className="fullscreen-overlay" onClick={closeFullScreenImage}>
+          <div className="fullscreen-modal">
+            <button className="fullscreen-close" onClick={closeFullScreenImage}>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              </svg>
+            </button>
+            <button
+              className="nav-btn nav-prev"
+              onClick={() => navigateImage("prev")}
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+              </svg>
+            </button>
+            <button
+              className="nav-btn nav-next"
+              onClick={() => navigateImage("next")}
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+              </svg>
+            </button>
+            <div className="fullscreen-content">
+              <img
+                src={fullScreenImage || "/placeholder.svg"}
+                alt="Full screen view"
+                className="fullscreen-image"
+                onError={handleImageError}
+              />
+              <div className="image-info">
+                {currentImageIndex + 1} / {birthdayImages.length}
               </div>
             </div>
           </div>
