@@ -485,10 +485,9 @@ Forever Love You Pgl Avrt
             </div>
             <div className="modal-content">
               <div className="celebration-content">
-                <h3>🌟 Amazing Billu! 🌟</h3>
+                <h3>🌟 Billu! 🌟</h3>
                 <p>
-                  Wishing you a day filled with happiness and a year filled with
-                  joy!
+                  Hamesha Khus Rahna Billu Hamesha Haste Hue Rahna Pagal Avrt.
                 </p>
                 <div className="celebration-grid">
                   {birthdayImages.map((img, index) => (
