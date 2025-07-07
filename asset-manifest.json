@@ -1,16 +1,42 @@
 {
   "files": {
-    "main.css": "/birthday/static/css/main.3d19e0fc.css",
-    "main.js": "/birthday/static/js/main.6e5faa28.js",
+    "main.css": "/birthday/static/css/main.5e4c2f71.css",
+    "main.js": "/birthday/static/js/main.47f3b96d.js",
     "static/js/453.7ee64490.chunk.js": "/birthday/static/js/453.7ee64490.chunk.js",
+    "static/media/video_20220901_094530.mp4": "/birthday/static/media/video_20220901_094530.f643a227193fb64f3fd9.mp4",
+    "static/media/video_20230227_212837_edit.mp4": "/birthday/static/media/video_20230227_212837_edit.21fdbe6c970fa46dfdc1.mp4",
+    "static/media/Snapchat-216865904.mp4": "/birthday/static/media/Snapchat-216865904.cc00a956b17b4c42bead.mp4",
+    "static/media/VID_80470511_102554_778.mp4": "/birthday/static/media/VID_80470511_102554_778.3971694012fde2a5af71.mp4",
+    "static/media/Screenshot_20250707_172022.jpg": "/birthday/static/media/Screenshot_20250707_172022.85d2b11bc352964aa8f5.jpg",
+    "static/media/Screenshot_20250707_170107.jpg": "/birthday/static/media/Screenshot_20250707_170107.9b151672b5e277d3e6de.jpg",
+    "static/media/Screenshot_20250707_170114.jpg": "/birthday/static/media/Screenshot_20250707_170114.fed72c72b5d40c2a26d6.jpg",
+    "static/media/Screenshot_20250707_172502.jpg": "/birthday/static/media/Screenshot_20250707_172502.ee18c8df2a1f8c83474c.jpg",
+    "static/media/_faizan_811-13-02-2023-0017.mp4": "/birthday/static/media/_faizan_811-13-02-2023-0017.722fee535381be701a21.mp4",
+    "static/media/Screenshot_20250707_170121.jpg": "/birthday/static/media/Screenshot_20250707_170121.8df03f408fdb1012fd52.jpg",
+    "static/media/Screenshot_20250707_170002.jpg": "/birthday/static/media/Screenshot_20250707_170002.11a85bbb7c87bb7846c0.jpg",
+    "static/media/ishikahukum-19072022-0001.mp4": "/birthday/static/media/ishikahukum-19072022-0001.521aaadd95d1686257ce.mp4",
+    "static/media/Screenshot_20250707_172042.jpg": "/birthday/static/media/Screenshot_20250707_172042.9d8142fed9af9fd17a12.jpg",
+    "static/media/Screenshot_20250707_165947.jpg": "/birthday/static/media/Screenshot_20250707_165947.14032e5adf513dce0a64.jpg",
+    "static/media/Screenshot_20250707_170018.jpg": "/birthday/static/media/Screenshot_20250707_170018.e9f3dbfda70db51e9408.jpg",
+    "static/media/Screenshot_20250707_170034.jpg": "/birthday/static/media/Screenshot_20250707_170034.733e905a7e309f97b7f6.jpg",
+    "static/media/Screenshot_20250707_170057.jpg": "/birthday/static/media/Screenshot_20250707_170057.43b6e9873265479c3490.jpg",
+    "static/media/Screenshot_20250707_172136.jpg": "/birthday/static/media/Screenshot_20250707_172136.658f21e29e5704dde999.jpg",
+    "static/media/Screenshot_20250707_172225.jpg": "/birthday/static/media/Screenshot_20250707_172225.5ed65fa5cee228da0257.jpg",
+    "static/media/Screenshot_20250707_172700.jpg": "/birthday/static/media/Screenshot_20250707_172700.55a66bf368794f69234d.jpg",
+    "static/media/Screenshot_20250707_172131.jpg": "/birthday/static/media/Screenshot_20250707_172131.45670673e035ca61364a.jpg",
+    "static/media/Screenshot_20250707_172541.jpg": "/birthday/static/media/Screenshot_20250707_172541.78fa3922ef91d370ced6.jpg",
+    "static/media/Screenshot_20250707_172246.jpg": "/birthday/static/media/Screenshot_20250707_172246.b836032d5adb360e661f.jpg",
+    "static/media/Screenshot_20250707_172436.jpg": "/birthday/static/media/Screenshot_20250707_172436.008f60ef1419b25e3515.jpg",
+    "static/media/Screenshot_20250707_170044.jpg": "/birthday/static/media/Screenshot_20250707_170044.7959792cec4eaee629da.jpg",
+    "static/media/Screenshot_20250707_172732.jpg": "/birthday/static/media/Screenshot_20250707_172732.8e2899905e40076192a5.jpg",
     "static/media/logo.svg": "/birthday/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/birthday/index.html",
-    "main.3d19e0fc.css.map": "/birthday/static/css/main.3d19e0fc.css.map",
-    "main.6e5faa28.js.map": "/birthday/static/js/main.6e5faa28.js.map",
+    "main.5e4c2f71.css.map": "/birthday/static/css/main.5e4c2f71.css.map",
+    "main.47f3b96d.js.map": "/birthday/static/js/main.47f3b96d.js.map",
     "453.7ee64490.chunk.js.map": "/birthday/static/js/453.7ee64490.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d19e0fc.css",
-    "static/js/main.6e5faa28.js"
+    "static/css/main.5e4c2f71.css",
+    "static/js/main.47f3b96d.js"
   ]
 }
